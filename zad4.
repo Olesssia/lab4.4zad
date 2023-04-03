@@ -1,0 +1,3 @@
+var tablica = [5, 3, 8, 1, 7, 2];
+var suma = policzSume(tablica);
+console.log(suma); // powinno wyświetlić "26"
