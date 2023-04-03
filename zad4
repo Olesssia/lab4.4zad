@@ -1,0 +1,17 @@
+function policzSume(tablica) {
+  // Sprawdzenie, czy tablica jest pusta
+  if (tablica.length === 0) {
+    return 0;
+  }
+  // Sprawdzenie, czy tablica ma tylko jeden element
+  if (tablica.length === 1) {
+    return tablica[0];
+  }
+  // Podział tablicy na dwie równe części
+  var polowa = Math.floor(tablica.length / 2);
+  // Rekurencyjne wywołanie algorytmu dla każdej połowy
+  var lewaPolowa = policzSume(tablica.slice(0, polowa));
+  var prawaPolowa = policzSume(tablica.slice(polowa));
+  // Sumowanie wyników dla obu połówek i zwrócenie sumy
+  return lewaPolowa + prawaPolowa;
+}
